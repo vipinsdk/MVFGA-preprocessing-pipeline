@@ -1,0 +1,2 @@
+# SUBJECT=264
+srun -K -p A100-80GB --nodes=1 --ntasks=1 --gpus-per-task=1 --mem=180G --cpus-per-gpu=12 --gpu-bind=none --time=01-00:00:00 --job-name="mtracker" --container-mounts=/netscratch/$USER:/netscratch/$USER,/home/$USER:/home/$USER --container-image=/netscratch/jeetmal/enroot/mtracker.sqsh --container-workdir="`pwd`" --export="NCCL_SOCKET_IFNAME=bond,NCCL_IB_HCA=mlx5" bash install.sh python tracker.py --cfg $1

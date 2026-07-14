@@ -1,0 +1,14 @@
+# Tracker config
+
+actor: '/netscratch/jeetmal/videos/Ameer/videos/Ameer_mtracker_2'
+save_folder: '/netscratch/jeetmal/output/metrical-tracker/Ameer/gaussian_avatars/data/'
+optimize_shape: true
+optimize_jaw: true
+optimize_neck: false
+flame_param : true
+flame_param_path: '/netscratch/jeetmal/output/metrical-tracker/Ameer/gaussian_avatars/flame2023/ameer/checkpoint'
+undistort: true
+begin_frames: 3
+alpha_map : true
+keyframes: [ 5, 6 ]
+

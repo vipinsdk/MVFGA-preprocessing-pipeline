@@ -1,0 +1,2 @@
+python3 multiview_sync.py --video_dir D:/Datacapture/Extrinsics_1/videos
+python3 multiview_sync.py --video_dir D:/Datacapture/Extrinsics_2/videos

@@ -1,0 +1,13 @@
+# Tracker config
+
+root_folder: '/netscratch/jeetmal/videos/capture_10_02_2025/Ameer/videos'
+save_folder: '/netscratch/jeetmal/output/mvfga/capture_10_
+02_2025/Ameer'
+flame_param_path: '/netscratch/jeetmal/output/mvfga/capture_10_02_2025/Ameer/background_matting/images'
+optimize_shape: true
+optimize_jaw: true
+optimize_neck: false
+undistort: true
+begin_frames: 15
+alpha_map : false
+keyframes: [ 16, 17 ]

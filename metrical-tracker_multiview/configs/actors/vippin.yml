@@ -1,0 +1,12 @@
+# Tracker config
+
+root_folder: '/netscratch/jeetmal/videos/capture_07_04_2025/videos'
+save_folder: '/netscratch/jeetmal/output/mvfga/Vippin_new/metrical_tracker/'
+optimize_shape: true
+optimize_jaw: true
+optimize_neck: false
+undistort: true
+begin_frames: 10
+alpha_map : false
+keyframes: [ 10, 11 ]
+# flame_param_path: '/netscratch/jeetmal/output/mvfga/Vippin/background_matting/images'

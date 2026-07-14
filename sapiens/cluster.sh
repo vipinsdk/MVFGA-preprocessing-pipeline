@@ -1,0 +1,2 @@
+# SUBJECT=264
+srun -K -p RTX3090 --nodes=1 --ntasks=1 --gpus-per-task=1 --mem=128G --cpus-per-gpu=1 --gpu-bind=none --time=01-00:00:00  --job-name="sapiens_body_seg" --container-mounts=/netscratch/$USER:/netscratch/$USER,/home/$USER:/home/$USER --container-image=/netscratch/jeetmal/enroot/sapiens.sqsh --container-workdir="`pwd`" --export="NCCL_SOCKET_IFNAME=bond,NCCL_IB_HCA=mlx5" bash install.sh bash run.sh /netscratch/jeetmal/videos/Ameer_full_setup/videos/source /netscratch/jeetmal/output/sapiens/Ameer_full_setup

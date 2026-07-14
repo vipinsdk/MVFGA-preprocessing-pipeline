@@ -1,0 +1,3 @@
+#!/bin/bash
+
+srun -K -p $1 --nodes=1 --ntasks=1 --gpus-per-task=1 --mem=64G --cpus-per-task=1 --gpu-bind=none --time=00-02:00:00  --job-name="mvfga" --container-mounts=/netscratch/$USER:/netscratch/$USER,/home/$USER:/home/$USER --container-image=/netscratch/jeetmal/enroot/easymocap.sqsh --container-workdir="`pwd`" --export="NCCL_SOCKET_IFNAME=bond,NCCL_IB_HCA=mlx5" bash install.sh python main.py --root_dir /home/vippin/thesis/extra --output /home/vippin/thesis/extra/demo_mvfga --sapiens --calibrate --background_matting

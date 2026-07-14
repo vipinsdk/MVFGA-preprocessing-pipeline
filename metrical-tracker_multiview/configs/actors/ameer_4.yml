@@ -1,0 +1,11 @@
+# Tracker config
+
+actor: '/netscratch/jeetmal/videos/Ameer/videos/Ameer_mtracker_4'
+save_folder: '/netscratch/jeetmal/output/metrical-tracker/Ameer/4_new/'
+optimize_shape: true
+optimize_jaw: true
+optimize_neck: false
+undistort: true
+camera_id: 4
+begin_frames: 1
+keyframes: [ 2, 3 ]

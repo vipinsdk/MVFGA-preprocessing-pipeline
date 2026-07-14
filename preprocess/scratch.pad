@@ -1,0 +1,32 @@
+ffprobe -v error -show_entries stream=side_data_list,rotation -of json F:\Datacapture\Seq1\cam02.MOV
+
+
+ffmpeg -i F:\Datacapture\Seq1\cam02.MOV -metadata:s:v:0 rotate=0 -c:v copy -c:a copy F:\Datacapture\Seq1\cam02.MOVtemp_cam03.mp4
+ffprobe -v error -select_streams v:0 -show_entries stream=r_frame_rate -of default=noprint_wrappers=1:nokey=1 F:\Datacapture\Seq1\cam02.MOV
+
+
+ffprobe -v error -show_entries stream=side_data_list,rotation -of json F:\Datacapture\Seq1\cam02.MOV
+
+
+cd /cmillerd/Projects/calibration_tools/preprocess
+python3 extract_from_vrs.py
+
+bash convert.sh
+
+
+
+
+python3 trim_synced_streams.py --video_dir /netscratch/millerdurai/Datacapture/19_12_2024/Extrinsics_1/videos  --output_dir /netscratch/millerdurai/Datacapture/19_12_2024/Extrinsics_1/videosSync
+
+python3 trim_synced_streams.py --video_dir /netscratch/millerdurai/Datacapture/Extrinsics/  --output_dir /netscratch/millerdurai/Datacapture/Extrinsics_Sync
+
+
+python3 trim_synced_streams.py --video_dir /netscratch/millerdurai/Datacapture/Seq1/  --output_dir /netscratch/millerdurai/Datacapture/Seq1_Sync
+
+
+
+python3 trim_synced_streams.py --video_dir /netscratch/millerdurai/Datacapture/12_12_2024/extrinsics/  --output_dir /netscratch/millerdurai/Datacapture/12_12_2024/extrinsics_Sync
+python3 trim_synced_streams.py --video_dir /netscratch/millerdurai/Datacapture/12_12_2024/aria_calib_2/  --output_dir /netscratch/millerdurai/Datacapture/12_12_2024/aria_calib_2_Sync
+
+
+aria_mps single --username dfki_9m81mg --password dfki0001 --features SLAM --input /mnt/c/Users/millerdurai/Downloads/79816fb4-93b2-48ca-b981-8f05a1216bf3.vrs
