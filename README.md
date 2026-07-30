@@ -6,6 +6,7 @@
 
 [![Project Page](https://img.shields.io/badge/Project-Page-2ea44f?style=for-the-badge)](https://dfki-av.github.io/MVFGA/)
 [![Paper](https://img.shields.io/badge/Paper-Computer%20Graphics%20Forum-4c72b0?style=for-the-badge)](https://diglib.eg.org/server/api/core/bitstreams/e49bfeeb-e6f3-4391-ba4f-52e09bc18386/content)
+[![Dataset](https://img.shields.io/badge/%F0%9F%A4%97%20Dataset-Hugging%20Face-yellow?style=for-the-badge)](https://huggingface.co/datasets/arjavanmardi/MVFGA)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=for-the-badge)](LICENSE)
 
 </div>
